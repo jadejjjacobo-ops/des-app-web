@@ -428,7 +428,6 @@ span {
 
 /* Fotografia Section Code */
 
-/* Sección completa */
 .fotografia {
     margin-top: 8rem;
     padding: 2rem 10%;
@@ -437,30 +436,26 @@ span {
     align-items: center;
 }
 
-/* Contenido del título */
 .fotografia-content {
     width: 100%;
     text-align: center;
-    margin-bottom: 3rem; /* espacio entre título y galería */
+    margin-bottom: 3rem; 
 }
 
-/* Título */
 .fotografia-content h3 {
     font-size: 6rem;
-    line-height: 1.2; /* interlineado del texto */
-    letter-spacing: 2px; /* opcional: más elegante */
+    line-height: 1.2; 
+    letter-spacing: 2px; 
 }
 
-/* Galería */
 .galeria {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 200px;
-    gap: 2rem; /* espacio entre imágenes */
+    gap: 2rem; 
 }
 
-/* Imágenes */
 .galeria img {
     width: 100%;
     height: 100%;
@@ -484,7 +479,6 @@ span {
     box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
-/* Collage */
 .galeria img:nth-child(1) {
     grid-column: span 2;
     grid-row: span 2;
@@ -498,6 +492,100 @@ span {
     grid-column: span 2;
 }
 
+/* Ceramica Section Code */
+
+
+
+.ceramica-content h3 {
+    font-size: 6rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Galerías (logotipos y servicios) */
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas */
+.card {
+    width: 300px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Imágenes dentro de cards */
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* evita deformación */
+    border-radius: 20px;
+}
+
+/* Texto */
+.card p {
+    padding: 1rem;
+    font-size: 14px;
+}
+
+/* Sección productos */
+.productos-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Título productos */
+.productos-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Contenedor de productos */
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Imágenes productos */
+.productos img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Redes sociales tipo pie */
+.redes-footer {
+    margin-top: 2rem;
+}
+
+.redes-footer p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Links redes */
+.redes-footer a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* Hover bonito */
+.redes-footer a:hover {
+    color: #0077ff;
+}
 
 
 
