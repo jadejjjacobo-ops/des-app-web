@@ -374,25 +374,23 @@ span {
 /* Portafolio Section Code */
 
 .portafolio .heading {
-    margin-bottom: 7rem; /* Aumenta este número para dar más espacio */
-    text-align: center;  /* Asegura que esté centrado */
+    margin-bottom: 7rem; 
+    text-align: center;  
 }
 
 .portafolio-container {
     display: flex;
-    justify-content: center; /* Centra los cuadros horizontalmente */
-    align-items: stretch;    /* Hace que todos los cuadros de una fila tengan la misma altura */
-    flex-wrap: wrap;         /* Permite que los cuadros bajen a la siguiente fila */
-    gap: 3rem;             /* Espacio entre cuadros */
-    max-width: 1400px;       /* Ancho máximo de la sección completa */
-    margin: 0 auto;          /* Centra el contenedor en la pantalla */
+    justify-content: center; 
+    align-items: stretch;    
+    flex-wrap: wrap;       
+    gap: 3rem;             
+    max-width: 1400px;       
+    margin: 0 auto;          
 }
 
-/* --- Las Tarjetas Individuales --- */
 .portafolio-container .portafolio-box {
-    /* El truco: flex-basis de 30% asegura que solo quepan 3 por fila (30% x 3 = 90% + gaps) */
     flex: 1 1 35rem; 
-    max-width: 40rem;        /* Limita el ancho para que no se vean gigantes */
+    max-width: 40rem;       
     background: var(--snd-bg-color);
     padding: 4rem 2rem;
     border-radius: 2.5rem;
@@ -400,14 +398,12 @@ span {
     border: 0.3rem solid var(--bg-color);
     transition: 0.3s ease;
     
-    /* Centrado interno del contenido */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Separa el título del botón uniformemente */
+    justify-content: space-between; 
     align-items: center;
 }
 
-/* --- Efectos Visuales --- */
 .portafolio-container .portafolio-box:hover {
     border-color: var(--main-color);
     transform: scale(1.03);
@@ -420,16 +416,79 @@ span {
 }
 
 .portafolio-box .btn {
-    padding: 1.5rem 4rem; /* Botón más robusto */
-    font-size: 1.8rem;    /* Texto del botón más grande */
+    padding: 1.5rem 4rem; 
+    font-size: 1.8rem;    
     border-radius: 1rem;
 }
 
-/* Opcional: Si usas iconos, hazlos destacar */
 .portafolio-box i {
-    font-size: 8rem;     /* Iconos gigantes */
+    font-size: 8rem;     
     margin-bottom: 3rem;
 }
+
+/* Fotografia Section Code */
+
+/* Sección completa */
+.fotografia {
+    padding: 5rem 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenido del título */
+.fotografia-content {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5rem; /* espacio entre título y galería */
+}
+
+/* Título */
+.fotografia-content h3 {
+    font-size: 6rem;
+    line-height: 1.2; /* interlineado del texto */
+    letter-spacing: 2px; /* opcional: más elegante */
+}
+
+/* Galería */
+.galeria {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 2rem; /* espacio entre imágenes */
+}
+
+/* Imágenes */
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Collage */
+.galeria img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.galeria img:nth-child(4) {
+    grid-column: span 2;
+}
+
+.galeria img:nth-child(7) {
+    grid-column: span 2;
+}
+
+
+
+
 
 /* Contacto Section Code */
 
