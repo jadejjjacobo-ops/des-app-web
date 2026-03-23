@@ -430,7 +430,8 @@ span {
 
 /* Sección completa */
 .fotografia {
-    padding: 5rem 10%;
+    margin-top: 8rem;
+    padding: 2rem 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -440,7 +441,7 @@ span {
 .fotografia-content {
     width: 100%;
     text-align: center;
-    margin-bottom: 5rem; /* espacio entre título y galería */
+    margin-bottom: 3rem; /* espacio entre título y galería */
 }
 
 /* Título */
@@ -465,11 +466,22 @@ span {
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    transition: transform 0.3s ease;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
 }
 
 .galeria img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.galeria img:active {
+    transform: scale(1.15); 
+    z-index: 10;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
 /* Collage */
