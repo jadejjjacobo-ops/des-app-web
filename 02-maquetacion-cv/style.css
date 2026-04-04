@@ -429,7 +429,7 @@ span {
 /* Fotografia Section Code */
 
 .fotografia {
-    margin-top: 8rem;
+    margin-top: 8rem; 
     padding: 2rem 10%;
     display: flex;
     flex-direction: column;
@@ -443,9 +443,10 @@ span {
 }
 
 .fotografia-content h3 {
-    font-size: 6rem;
-    line-height: 1.2; 
-    letter-spacing: 2px; 
+    font-size: 5rem; 
+    line-height: 1.2;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 .galeria {
@@ -453,7 +454,7 @@ span {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 200px;
-    gap: 2rem; 
+    gap: 1.5rem;
 }
 
 .galeria img {
@@ -461,7 +462,7 @@ span {
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    cursor: pointer;
+    cursor: pointer; 
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 1;
@@ -479,113 +480,234 @@ span {
     box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
-.galeria img:nth-child(1) {
-    grid-column: span 2;
-    grid-row: span 2;
-}
+.galeria img:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.galeria img:nth-child(4) { grid-column: span 2; }
+.galeria img:nth-child(7) { grid-column: span 2; }
 
-.galeria img:nth-child(4) {
-    grid-column: span 2;
-}
-
-.galeria img:nth-child(7) {
-    grid-column: span 2;
-}
 
 /* Ceramica Section Code */
-
-
 
 .ceramica-content h3 {
     font-size: 6rem;
     text-align: center;
-    margin: 2rem 0;
+    margin: 4rem 0 2rem;
 }
 
-/* Galerías (logotipos y servicios) */
-.galeria {
+/*Logotipos*/
+.galeria-fila-unica {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;     
+    gap: 3rem;                
+    padding: 2rem 5%;        
+    width: 100%;
+    max-width: 1200px;        
+    margin: 0 auto 5rem;      
 }
 
-/* Tarjetas */
-.card {
-    width: 300px;
+
+.card-unica {
+    width: 100%;                
     background: #fff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+    display: flex;
+    flex-direction: row;    
+    align-items: stretch;   
+    transition: transform 0.3s ease;
 }
 
-/* Imágenes dentro de cards */
-.card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover; /* evita deformación */
-    border-radius: 20px;
+.card-unica:hover {
+    transform: scale(1.02);
 }
 
-/* Texto */
-.card p {
-    padding: 1rem;
-    font-size: 14px;
-}
-
-/* Sección productos */
-.productos-section {
-    text-align: center;
-    padding: 2rem;
-}
-
-/* Título productos */
-.productos-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Contenedor de productos */
-.productos {
+.card-img-container {
+    flex: 0 0 40%;
+    height: 300px;        
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    max-height: 80%;         
+    max-width: 80%;
+    object-fit: contain;     
+}
+
+.card-img-container img.img-completa {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;       
+}
+
+.card-text {
+    flex: 0 0 60%;         
+    padding: 3rem;          
+    display: flex;
+    align-items: center;
+}
+
+.card-text p {
+    font-size: 1.6rem;     
+    line-height: 1.7;
+    color: #444;
+    margin: 0;
+    text-align: left;
+}
+
+/* Servicios*/
+.servicios-ceramica{
+    text-align: center;
+}
+
+.servicios-ceramica h2{
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.galeria-ceramica {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem 10%;
     flex-wrap: wrap;
 }
 
-/* Imágenes productos */
-.productos img {
-    width: 200px;
-    height: 200px;
+.card-ceramica {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.card-ceramica:hover {
+    transform: translateY(-5px);
+}
+
+.card-ceramica img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.card-ceramica p {
+    padding: 2rem;
+    font-size: 1.6rem; 
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Productos*/
+.productos-section {
+    text-align: center;
+    padding: 5rem 10%;
+}
+
+.productos-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.productos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.productos-grid img {
+    width: 220px;
+    height: 220px;
     object-fit: cover;
     border-radius: 20px;
-}
-
-/* Redes sociales tipo pie */
-.redes-footer {
-    margin-top: 2rem;
-}
-
-.redes-footer p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-/* Links redes */
-.redes-footer a {
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.2rem;
-    color: #333;
     transition: 0.3s;
 }
 
-/* Hover bonito */
-.redes-footer a:hover {
-    color: #0077ff;
+.productos-grid img:hover {
+    filter: brightness(0.9);
 }
+
+/* Redes sociales */
+
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--snd-bg-color);
+    text-align: center;
+}
+
+.footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;; 
+    padding-bottom: 25px;
+}
+
+.footer .redes-sociales a {
+    position: relative; 
+    font-size: 25px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 45px;
+    height: 45px;
+    line-height: 42px; 
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.social-text {
+    position: absolute;
+    left: 55px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--main-color);
+    white-space: nowrap; 
+}
+
+.footer .redes-sociales a:hover {
+    transform: scale(1.1) translateY(-5px);
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.footer .redes-sociales a:hover .social-text {
+    color: var(--main-color); 
+    background: transparent; 
+}
+
+.footer .copyright-text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
